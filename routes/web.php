@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PegawaiController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,7 @@ Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('roles/lists', [RoleController::class, 'lists'])->name('roles.lists');
         Route::resource('roles', RoleController::class);
+        Route::resource('pegawai', PegawaiController::class);
     });
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
