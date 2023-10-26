@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\JenisPtk;
+use App\Models\StatusKawin;
+use App\Models\StatusPegawai;
+use App\Models\SumberGaji;
 use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
@@ -24,7 +28,17 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.pegawai.create');
+        $data = [
+            'status_kawin' => StatusKawin::get(),
+            'kelurahan' => StatusKawin::get(),
+            'kecamatan' => StatusKawin::get(),
+            'kabupaten' => StatusKawin::get(),
+            'provinsi' => StatusKawin::get(),
+            'status_kepegawaian' => StatusPegawai::get(),
+            'jenis_ptk' => JenisPtk::get(),
+            'sumber_gaji' => SumberGaji::get(),
+        ];
+        return view('admin.pages.pegawai.create', $data);
     }
 
     /**
