@@ -32,8 +32,5 @@ class AuthController extends Controller
         ])->onlyInput('email');
     }
 
-    public function register()
-    {
-        return view('admin.pages.auth.register');
-    }
+    
 }

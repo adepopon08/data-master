@@ -27,11 +27,12 @@ Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
     ->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'); //{{ route('admin.dashbooard') }}
         //Route::get('user', [UserController::class, 'index'])->name('user');
+        Route::get('user/lists', [UserController::class, 'lists'])->name('user.lists');
         Route::resource('user', UserController::class);
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('roles/lists', [RoleController::class, 'lists'])->name('roles.lists');
         Route::resource('roles', RoleController::class);
     });
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/customLogin', [AuthController::class, 'authenticate'])->name('customLogin');
-Route::get('/registerLogin', [AuthController::class, 'register'])->name('register');
