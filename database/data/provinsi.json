@@ -1,0 +1,206 @@
+[
+  {
+    "id": "1",
+    "provinsi": "Aceh",
+    "ibu_kota": "Banda Aceh",
+    "p_bsni": "ID-AC"
+  },
+  {
+    "id": "2",
+    "provinsi": "Sumatra Utara",
+    "ibu_kota": "Medan",
+    "p_bsni": "ID-SU"
+  },
+  {
+    "id": "3",
+    "provinsi": "Sumatra Barat",
+    "ibu_kota": "Padang",
+    "p_bsni": "ID-SB"
+  },
+  {
+    "id": "4",
+    "provinsi": "Riau",
+    "ibu_kota": "Pekanbaru",
+    "p_bsni": "ID-RI"
+  },
+  {
+    "id": "5",
+    "provinsi": "Jambi",
+    "ibu_kota": "Jambi",
+    "p_bsni": "ID-JA"
+  },
+  {
+    "id": "6",
+    "provinsi": "Sumatra Selatan",
+    "ibu_kota": "Palembang",
+    "p_bsni": "ID-SS"
+  },
+  {
+    "id": "7",
+    "provinsi": "Bengkulu",
+    "ibu_kota": "Bengkulu",
+    "p_bsni": "ID-BE"
+  },
+  {
+    "id": "8",
+    "provinsi": "Lampung",
+    "ibu_kota": "Bandar Lampung",
+    "p_bsni": "ID-LA"
+  },
+  {
+    "id": "9",
+    "provinsi": "Kepulauan Bangka Belitung",
+    "ibu_kota": "Pangkalpinang",
+    "p_bsni": "ID-BB"
+  },
+  {
+    "id": "10",
+    "provinsi": "Kepulauan Riau",
+    "ibu_kota": "Tanjungpinang",
+    "p_bsni": "ID-KR"
+  },
+  {
+    "id": "11",
+    "provinsi": "Daerah Khusus Ibukota Jakarta",
+    "ibu_kota": "Jakarta",
+    "p_bsni": "ID-JB"
+  },
+  {
+    "id": "12",
+    "provinsi": "Jawa Barat",
+    "ibu_kota": "Bandung",
+    "p_bsni": "ID-JB"
+  },
+  {
+    "id": "13",
+    "provinsi": "Jawa Tengah",
+    "ibu_kota": "Semarang",
+    "p_bsni": "ID-JT"
+  },
+  {
+    "id": "14",
+    "provinsi": "Daerah Istimewa Yogyakarta",
+    "ibu_kota": "Yogyakarta",
+    "p_bsni": "ID-YO"
+  },
+  {
+    "id": "15",
+    "provinsi": "Jawa Timur",
+    "ibu_kota": "Surabaya",
+    "p_bsni": "ID-JI"
+  },
+  {
+    "id": "16",
+    "provinsi": "Banten",
+    "ibu_kota": "Serang",
+    "p_bsni": "ID-BT"
+  },
+  {
+    "id": "17",
+    "provinsi": "Bali",
+    "ibu_kota": "Denpasar",
+    "p_bsni": "ID-BA"
+  },
+  {
+    "id": "18",
+    "provinsi": "Nusa Tenggara Barat",
+    "ibu_kota": "Mataram",
+    "p_bsni": "ID-NB"
+  },
+  {
+    "id": "19",
+    "provinsi": "Nusa Tenggara Timur",
+    "ibu_kota": "Kupang",
+    "p_bsni": "ID-NT"
+  },
+  {
+    "id": "20",
+    "provinsi": "Kalimantan Barat",
+    "ibu_kota": "Pontianak",
+    "p_bsni": "ID-KB"
+  },
+  {
+    "id": "21",
+    "provinsi": "Kalimantan Tengah",
+    "ibu_kota": "Palangka Raya",
+    "p_bsni": "ID-KT"
+  },
+  {
+    "id": "22",
+    "provinsi": "Kalimantan Selatan",
+    "ibu_kota": "Banjarmasin",
+    "p_bsni": "ID-KS"
+  },
+  {
+    "id": "23",
+    "provinsi": "Kalimantan Timur",
+    "ibu_kota": "Samarinda",
+    "p_bsni": "ID-KI"
+  },
+  {
+    "id": "24",
+    "provinsi": "Kalimantan Utara",
+    "ibu_kota": "Tanjung Selor",
+    "p_bsni": "ID-KU"
+  },
+  {
+    "id": "25",
+    "provinsi": "Sulawesi Utara",
+    "ibu_kota": "Manado",
+    "p_bsni": "ID-SA"
+  },
+  {
+    "id": "26",
+    "provinsi": "Sulawesi Tengah",
+    "ibu_kota": "Palu",
+    "p_bsni": "ID-ST"
+  },
+  {
+    "id": "27",
+    "provinsi": "Sulawesi Selatan",
+    "ibu_kota": "Makassar",
+    "p_bsni": "ID-SN"
+  },
+  {
+    "id": "28",
+    "provinsi": "Sulawesi Tenggara",
+    "ibu_kota": "Kendari",
+    "p_bsni": "ID-SG"
+  },
+  {
+    "id": "29",
+    "provinsi": "Gorontalo",
+    "ibu_kota": "Gorontalo",
+    "p_bsni": "ID-GO"
+  },
+  {
+    "id": "30",
+    "provinsi": "Sulawesi Barat",
+    "ibu_kota": "Mamuju",
+    "p_bsni": "ID-SR"
+  },
+  {
+    "id": "31",
+    "provinsi": "Maluku",
+    "ibu_kota": "Ambon",
+    "p_bsni": "ID-MA"
+  },
+  {
+    "id": "32",
+    "provinsi": "Maluku Utara",
+    "ibu_kota": "Sofifi",
+    "p_bsni": "ID-MU"
+  },
+  {
+    "id": "33",
+    "provinsi": "Papua",
+    "ibu_kota": "Jayapura",
+    "p_bsni": "ID-PA"
+  },
+  {
+    "id": "34",
+    "provinsi": "Papua Barat",
+    "ibu_kota": "Manokwari",
+    "p_bsni": "ID-PB"
+  }
+]
