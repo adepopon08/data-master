@@ -40,8 +40,16 @@
                                 User
                             </a>
                         </li>
+
                     </ul>
+
                 </div>
+            <li class="nav-item">
+                <a class="nav-link has-arrow" href="{{ route('admin.pegawai.index') }}">
+                    <i data-feather="users" class="nav-icon icon-xs me-2"></i> Pegawai
+                </a>
+
+            </li>
             </li>
         </ul>
     </div>

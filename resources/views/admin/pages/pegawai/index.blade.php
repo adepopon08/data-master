@@ -8,10 +8,10 @@
                 <div>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mb-2 mb-lg-0">
-                            <h3 class="mb-0  text-white">Data Role</h3>
+                            <h3 class="mb-0  text-white">Data Pegawai</h3>
                         </div>
                         <div>
-                            <a href="{{ route('admin.pegawai.create') }}" class="btn btn-white">Tambah Role</a>
+                            <a href="{{ route('admin.pegawai.create') }}" class="btn btn-white">Tambah Pegawai</a>
                         </div>
                     </div>
                 </div>
