@@ -5,17 +5,36 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class RoleController extends Controller
 {
     public function index()
     {
-        $data = [
-            'roles' => Role::search(request()->search)->paginate(1),
-        ];
-        return view('admin.pages.role.index', $data);
+
+        return view('admin.pages.role.index');
     }
 
+    public function lists(Request $request)
+    {
+        $columns = ['id', 'role'];
+        if ($request->wantsJson()) {
+            $data = Role::query()->latest();
+            return DataTables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $actionBtn = '<a class="btn btn-primary btn-sm" href="' . route('admin.roles.edit', $row->id) . '"><i class="bi bi-pen"></i></a>';
+                    $actionBtn .= ' <a role="button"
+                    onclick="showConfirmDialog(`Yakin anda akan menghapus data ini?`, () => destroy(`' . $row->id . '`))"
+                    class="confirm-delete btn btn-danger btn-sm">
+                    <i class="bi bi-trash"></i>
+                </a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+    }
     public function create()
     {
         return view('admin.pages.role.create');

@@ -1,17 +1,17 @@
-# LARAVEL STARTER KIT
+# LARAVEL DATA MASTER
 
 ## Installation
 
 Clone the project
 
 ```bash
-  git clone https://github.com/adepopon08/starter-kit.git
+  git clone https://github.com/adepopon08/data-master
 ```
 
 Go to the project directory
 
 ```bash
-  cd starter-kit
+  cd data-master
 ```
 
 Install dependencies Composer
@@ -38,7 +38,7 @@ Setting Enviroment (.env)
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
   DB_PORT=3306
-  DB_DATABASE=starter_kit
+  DB_DATABASE=data-master
   DB_USERNAME=root
   DB_PASSWORD=
 ```
