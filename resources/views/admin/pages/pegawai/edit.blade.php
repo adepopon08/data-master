@@ -8,7 +8,7 @@
                 <div>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="mb-2 mb-lg-0">
-                            <h3 class="mb-0  text-white">Edit Data Pegawai</h3>
+                            <h3 class="mb-0  text-white">Tambah Data Pegawai</h3>
                         </div>
 
                     </div>
@@ -22,24 +22,22 @@
                         <!-- Tabs navs -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="biodata-tab" data-bs-toggle="tab"
-                                    data-bs-target="#biodata" type="button" role="tab" aria-controls="biodata"
-                                    aria-selected="true">Biodata</button>
+                                <button class="nav-link active" id="identitas-tab" data-bs-toggle="tab"
+                                    data-bs-target="#identitas" type="button" role="tab" aria-controls="identitas"
+                                    aria-selected="true">Identitas</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tugas-tab" data-bs-toggle="tab" data-bs-target="#tugas"
-                                    type="button" role="tab" aria-controls="tugas" aria-selected="false">Tugas</button>
+                                <button class="nav-link" id="domisili-tab" data-bs-toggle="tab" data-bs-target="#domisili"
+                                    type="button" role="tab" aria-controls="domisili"
+                                    aria-selected="false">Domisili</button>
                             </li>
+
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pendidikan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pendidikan" type="button" role="tab" aria-controls="pendidikan"
-                                    aria-selected="false">Pendidikan</button>
+                                <button class="nav-link" id="kepegawaian-tab" data-bs-toggle="tab"
+                                    data-bs-target="#kepegawaian" type="button" role="tab" aria-controls="kepegawaian"
+                                    aria-selected="false">Kepegawaian</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="kepangkatan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#kepangkatan" type="button" role="tab" aria-controls="kepangkatan"
-                                    aria-selected="false">Kepangkatan</button>
-                            </li>
+
                         </ul>
 
                         <!-- Tabs navs -->
@@ -56,14 +54,17 @@
                                         <!-- card title -->
                                         <!-- Tabs content -->
                                         <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="biodata" role="tabpanel"
-                                                aria-labelledby="biodata-tab">Biodata</div>
-                                            <div class="tab-pane fade" id="tugas" role="tabpanel"
-                                                aria-labelledby="tugas-tab">Tugas Tambahan</div>
-                                            <div class="tab-pane fade" id="pendidikan" role="tabpanel"
-                                                aria-labelledby="pendidikan-tab">Pendidikan</div>
-                                            <div class="tab-pane fade" id="kepangkatan" role="tabpanel"
-                                                aria-labelledby="kepangkatan-tab">Kepangkatan</div>
+                                            @include('admin.pages.pegawai.tab-indentitas')
+
+                                            @include('admin.pages.pegawai.tab-domisili')
+
+                                            @include('admin.pages.pegawai.tab-kepangkatan')
+
+                                            @include('admin.pages.pegawai.tab-kepegawaian')
+
+                                            @include('admin.pages.pegawai.tab-pendidikan')
+
+                                            @include('admin.pages.pegawai.tab-tugastamb')
                                         </div>
                                     </div>
                                 </div>
