@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Agama;
 use App\Models\Bank;
 use App\Models\JenisPtk;
 use App\Models\Pangkat;
 use App\Models\Pegawai;
+use App\Models\Pekerjaan;
 use App\Models\StatusKawin;
 use App\Models\StatusPegawai;
 use App\Models\SumberGaji;
@@ -35,7 +37,9 @@ class PegawaiController extends Controller
             'kelurahan' => DB::table('tb_kelurahan')->get(),
             'bank' => Bank::get(),
             'pangkat' => Pangkat::get(),
+            'agama' => Agama::get(),
             'tugas_tambahan' => TugasTambahan::get(),
+            'pekerjaan_pasangan' => Pekerjaan::get(),
         ];
         return view('admin.pages.pegawai.create', $data);
     }

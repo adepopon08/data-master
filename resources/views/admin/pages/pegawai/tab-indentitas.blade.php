@@ -109,11 +109,10 @@
         <label class="form-label" for="selectOne">Agama</label>
         <select class="form-select @error('id_agama') is-invalid @enderror" name="id_agama"
             aria-label="Default select ">
-            <option value="Islam">Islam</option>
-            {{-- @foreach ($agama as $agm)
-                                                                <option value="{{ $agm->id }}" @selected(($data->id_agama ?? '') == $agm->id)>{{ $agm->nama_agama }}
-                                                                </option>
-                                                            @endforeach --}}
+            @foreach ($agama as $agm)
+                <option value="{{ $agm->id }}" @selected(($data->id_agama ?? '') == $agm->id)>{{ $agm->nama_agama }}
+                </option>
+            @endforeach
         </select>
         @error('id_agama')
             <div class="invalid-feedback">
@@ -186,12 +185,12 @@
             Suami/Istri</label>
         <select class="form-select @error('id_pekerjaan_pasangan') is-invalid @enderror" name="id_pekerjaan_pasangan"
             aria-label="Default select ">
-            <option value="Wiraswasta">Wiraswasta</option>
-            {{-- @foreach ($pekerjaan_pasangan as $pekpasangan)
-                                                                <option value="{{ $pekpasangan->id }}" @selected(($data->id_pekerjaan_pasangan ?? '') == $pekpasangan->id)>
-                                                                    {{ $pekpasangan->pekerjaan }}
-                                                                </option>
-                                                            @endforeach --}}
+
+            @foreach ($pekerjaan_pasangan as $pekpasangan)
+                <option value="{{ $pekpasangan->id }}" @selected(($data->id_pekerjaan_pasangan ?? '') == $pekpasangan->id)>
+                    {{ $pekpasangan->pekerjaan }}
+                </option>
+            @endforeach
         </select>
         @error('id_pekerjaan_pasangan')
             <div class="invalid-feedback">

@@ -6,7 +6,7 @@
               aria-label="Default select ">
               @foreach ($status_kepegawaian as $stat_peg)
                   <option value="{{ $stat_peg->id }}" @selected(($data->id_stat_peg ?? '') == $stat_peg->id)>
-                      {{ $stat_peg->status_kawin }}
+                      {{ $stat_peg->stat_peg }}
                   </option>
               @endforeach
           </select>
