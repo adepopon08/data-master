@@ -47,7 +47,7 @@
                 data-placeholder="Pilih Provinsi">
                 <option></option>
                 @foreach ($provinsi as $prov)
-                    <option value="{{ $prov->id }}">
+                    <option value="{{ $prov->id }}" @selected(($data->id_provinsi ?? '') == $prov->id)>
                         {{ $prov->provinsi }}
                     </option>
                 @endforeach
@@ -63,7 +63,7 @@
             <select class="select2 form-select @error('id_kabupaten') is-invalid @enderror" name="id_kabupaten"
                 data-placeholder="Pilih Kabupaten">
                 @foreach ($kabupaten as $kab)
-                    <option value="{{ $kab->id }}">
+                    <option value="{{ $kab->id }}" @selected(($data->id_kabupaten ?? '') == $kab->id)>
                         {{ $kab->kabupaten }}
                     </option>
                 @endforeach
@@ -80,7 +80,7 @@
             <select class="select2 form-select @error('id_kecamatan') is-invalid @enderror" name="id_kecamatan"
                 data-placeholder="Pilih Kecamatan">
                 @foreach ($kecamatan as $camat)
-                    <option value="{{ $camat->id }}">
+                    <option value="{{ $camat->id }}" @selected(($data->id_kecamatan ?? '') == $camat->id)>
                         {{ $camat->kecamatan }}
                     </option>
                 @endforeach
@@ -97,7 +97,7 @@
             <select class="select2 form-select @error('id_kelurahan') is-invalid @enderror" name="id_kelurahan"
                 data-placeholder="Pilih Kelurahan">
                 @foreach ($kelurahan as $kel)
-                    <option value="{{ $kel->id }}">
+                    <option value="{{ $kel->id }}" @selected(($data->id_kelurahan ?? '') == $kel->id)>
                         {{ $kel->kelurahan }}
                     </option>
                 @endforeach
@@ -112,7 +112,8 @@
         <div class="mb-3">
             <label class="form-label" for="selectOne">Kode Pos</label>
             <input type="text" name="kode_pos" id="kode_pos"
-                class="form-control @error('kode_pos') is-invalid @enderror" placeholder="kode_pos">
+                class="form-control @error('kode_pos') is-invalid @enderror" placeholder="kode_pos"
+                value="{{ $data->kode_pos ?? '' }}">
             @error('kode_pos')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -122,7 +123,8 @@
         <div class="mb-3">
             <label class="form-label" for="selectOne">Lintang</label>
             <input type="text" name="lintang" id="lintang"
-                class="form-control @error('lintang') is-invalid @enderror" placeholder="lintang">
+                class="form-control @error('lintang') is-invalid @enderror" placeholder="lintang"
+                value="{{ $data->lintang ?? '' }}">
             @error('lintang')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -132,7 +134,8 @@
         <div class="mb-3">
             <label class="form-label" for="selectOne">Bujur</label>
             <input type="text" name="bujur" id="bujur"
-                class="form-control @error('bujur') is-invalid @enderror" placeholder="bujur">
+                class="form-control @error('bujur') is-invalid @enderror" placeholder="bujur"
+                value="{{ $data->bujur ?? '' }}">
             @error('bujur')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -142,7 +145,8 @@
         <div class="mb-3">
             <label class="form-label" for="selectOne">No Telepon Rumah</label>
             <input type="text" name="no_telepon" id="no_telepon"
-                class="form-control @error('no_telepon') is-invalid @enderror" placeholder="no_telepon">
+                class="form-control @error('no_telepon') is-invalid @enderror" placeholder="no_telepon"
+                value="{{ $data->no_telepon ?? '' }}">
             @error('no_telepon')
                 <div class="invalid-feedback">
                     {{ $message }}
