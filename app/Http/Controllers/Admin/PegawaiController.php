@@ -102,9 +102,9 @@ class PegawaiController extends Controller
 
         $created = Pegawai::create($validated);
         if ($created) {
-            return redirect()->route('admin.roles.index')->with('success', 'Data berhasil disimpan.');
+            return redirect()->route('admin.pegawai.index')->with('success', 'Data berhasil disimpan.');
         }
-        return redirect()->route('admin.roles.index')->with('error', 'Data gagal disimpan.');
+        return redirect()->route('admin.pegawai.index')->with('error', 'Data gagal disimpan.');
     }
 
     public function show($id)
@@ -150,7 +150,7 @@ class PegawaiController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
-                    $actionBtn = '<a class="btn btn-primary btn-sm" href="' . route('admin.roles.edit', $row->id) . '"><i class="bi bi-pen"></i></a>';
+                    $actionBtn = '<a class="btn btn-primary btn-sm" href="' . route('admin.pegawai.edit', $row->id) . '"><i class="bi bi-pen"></i></a>';
                     $actionBtn .= ' <a role="button"
                     onclick="showConfirmDialog(`Yakin anda akan menghapus data ini?`, () => destroy(`' . $row->id . '`))"
                     class="confirm-delete btn btn-danger btn-sm">

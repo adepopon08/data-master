@@ -234,7 +234,8 @@
         @enderror
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary">Submit</button>
-        <a href="{{ route('admin.pegawai.index') }}" class="btn btn-secondary ml-4">Kembali</a>
+        <button type="button" class="btn btn-primary" onclick="document.querySelector('#domisili-tab').click()"
+            aria-selected="false">Berikutnya</button>
+        {{-- <a href="{{ route('admin.pegawai.index') }}" class="btn btn-secondary ml-4">Kembali</a> --}}
     </div>
 </div>

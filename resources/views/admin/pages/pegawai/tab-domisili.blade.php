@@ -150,8 +150,8 @@
         @enderror
     </div>
     <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="{{ route('admin.pegawai.index') }}" class="btn btn-secondary ml-4">Kembali</a>
+        <button type="button" class="btn btn-primary" onclick="document.querySelector('#kepegawaian-tab').click()"
+            aria-selected="false">Berikutnya</button>
     </div>
 
 </div>

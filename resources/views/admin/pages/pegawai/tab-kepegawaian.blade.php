@@ -201,9 +201,11 @@
       <div class="mb-3">
           <label class="form-label" for="selectOne">Lisensi Kepala
               Sekolah</label>
-          <input type="text" name="lisensi_kepsek" id="lisensi_kepsek"
-              class="form-control @error('lisensi_kepsek') is-invalid @enderror" placeholder="lisensi_kepsek"
-              value="{{ $data->lisensi_kepsek ?? '' }}">
+          <select class="form-select @error('lisensi_kepsek') is-invalid @enderror" name="lisensi_kepsek"
+              data-placeholder="Default select ">
+              <option value="1" @selected(($data->lisensi_kepsek ?? '') == 'IYA')>IYA</option>
+              <option value="0" @selected(($data->lisensi_kepsek ?? '') == 'TIDAK')>TIDAK</option>
+          </select>
           @error('lisensi_kepsek')
               <div class="invalid-feedback">
                   {{ $message }}
@@ -260,8 +262,6 @@
               </div>
           @enderror
       </div>
-      <div class="mb-3">
-          <button class="btn btn-primary">Submit</button>
-          <a href="{{ route('admin.pegawai.index') }}" class="btn btn-secondary ml-4">Kembali</a>
-      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
   </div>
