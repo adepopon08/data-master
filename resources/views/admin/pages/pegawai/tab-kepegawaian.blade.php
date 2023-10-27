@@ -89,7 +89,7 @@
               <label class="form-label" for="selectOne">TMT Pengangkatan</label>
               <input type="date" name="tmt_pengangkatan" id="tmt_pengangkatan"
                   class="form-control @error('tmt_pengangkatan') is-invalid @enderror" placeholder="tmt_pengangkatan"
-                  value="{{ $data->tmt_pengangkatan }}">
+                  value="{{ $data->tmt_pengangkatan ?? '' }}">
               @error('tmt_pengangkatan')
                   <div class="invalid-feedback">
                       {{ $message }}
