@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\JenisPtk;
+use App\Models\Pangkat;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,7 +15,7 @@ class PangkatSeeder extends Seeder
      */
     public function run()
     {
-        JenisPtk::insert([
+        Pangkat::insert([
             [
                 'pangkat' => 'Juru Muda/Ia',
             ],

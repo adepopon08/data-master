@@ -23,7 +23,8 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
+Route::prefix('admin')
+    ->middleware(['auth', 'roles:admin,user'])
     ->name('admin.')
     ->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'); //{{ route('admin.dashbooard') }}
@@ -33,8 +34,11 @@ Route::prefix('admin')->middleware(['auth', 'roles:admin,user'])
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('roles/lists', [RoleController::class, 'lists'])->name('roles.lists');
         Route::resource('roles', RoleController::class);
+
+        Route::get('pegawai/lists', [PegawaiController::class, 'lists'])->name('pegawai.lists');
         Route::resource('pegawai', PegawaiController::class);
     });
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/customLogin', [AuthController::class, 'authenticate'])->name('customLogin');

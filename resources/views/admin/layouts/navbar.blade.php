@@ -108,7 +108,7 @@
 
 
                     <div class="lh-1 ">
-                        <h5 class="mb-1"> John E. Grainger</h5>
+                        <h5 class="mb-1">{{ auth()->user()->name }}</h5>
                         <a href="#" class="text-inherit fs-6">View my profile</a>
                     </div>
                     <div class=" dropdown-divider mt-3 mb-2"></div>
@@ -122,7 +122,7 @@
                             Profile
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a class="dropdown-item" href="#">
                             <i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>Activity Log
                         </a>
@@ -139,9 +139,10 @@
                         <a class="dropdown-item" href="#">
                             <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Account Settings
                         </a>
-                    </li>
+                    </li> --}}
                     <li>
-                        <a class="dropdown-item" href="./index.html">
+                        <form id="logout" method="POST" action="{{ route('logout') }}">@csrf</form>
+                        <a class="dropdown-item" href="#" onclick="document.querySelector('#logout').submit()">
                             <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>Sign Out
                         </a>
                     </li>

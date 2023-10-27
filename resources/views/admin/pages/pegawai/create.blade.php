@@ -19,56 +19,60 @@
                 <div class="card ">
                     <!-- card body -->
                     <div class="card-body">
-                        <!-- Tabs navs -->
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="biodata-tab" data-bs-toggle="tab"
-                                    data-bs-target="#biodata" type="button" role="tab" aria-controls="biodata"
-                                    aria-selected="true">Biodata</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tugas-tab" data-bs-toggle="tab" data-bs-target="#tugas"
-                                    type="button" role="tab" aria-controls="tugas" aria-selected="false">Tugas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pendidikan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pendidikan" type="button" role="tab" aria-controls="pendidikan"
-                                    aria-selected="false">Pendidikan</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="kepangkatan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#kepangkatan" type="button" role="tab" aria-controls="kepangkatan"
-                                    aria-selected="false">Kepangkatan</button>
-                            </li>
-                        </ul>
+                        <form action="{{ route('admin.pegawai.store') }}" method="POST">
+                            @csrf
+                            <!-- Tabs navs -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="identitas-tab" data-bs-toggle="tab"
+                                        data-bs-target="#identitas" type="button" role="tab" aria-controls="identitas"
+                                        aria-selected="true">Identitas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="domisili-tab" data-bs-toggle="tab"
+                                        data-bs-target="#domisili" type="button" role="tab" aria-controls="domisili"
+                                        aria-selected="false">Domisili</button>
+                                </li>
 
-                        <!-- Tabs navs -->
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="kepegawaian-tab" data-bs-toggle="tab"
+                                        data-bs-target="#kepegawaian" type="button" role="tab"
+                                        aria-controls="kepegawaian" aria-selected="false">Kepegawaian</button>
+                                </li>
+
+                            </ul>
+
+                            <!-- Tabs navs -->
 
 
-                        <!-- Tabs content -->
-                        <!-- content -->
-                        <div class="row">
-                            <div class="col-md-12 mt-6">
-                                <!-- card -->
-                                <div class="card">
-                                    <!-- card body -->
-                                    <div class="card-body">
-                                        <!-- card title -->
-                                        <!-- Tabs content -->
-                                        <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="biodata" role="tabpanel"
-                                                aria-labelledby="biodata-tab">Biodata</div>
-                                            <div class="tab-pane fade" id="tugas" role="tabpanel"
-                                                aria-labelledby="tugas-tab">Tugas Tambahan</div>
-                                            <div class="tab-pane fade" id="pendidikan" role="tabpanel"
-                                                aria-labelledby="pendidikan-tab">Pendidikan</div>
-                                            <div class="tab-pane fade" id="kepangkatan" role="tabpanel"
-                                                aria-labelledby="kepangkatan-tab">Kepangkatan</div>
+                            <!-- Tabs content -->
+                            <!-- content -->
+                            <div class="row">
+                                <div class="col-md-12 mt-6">
+                                    <!-- card -->
+                                    <div class="card">
+                                        <!-- card body -->
+                                        <div class="card-body">
+                                            <!-- card title -->
+                                            <!-- Tabs content -->
+                                            <div class="tab-content" id="myTabContent">
+                                                @include('admin.pages.pegawai.tab-indentitas')
+
+                                                @include('admin.pages.pegawai.tab-domisili')
+
+                                                @include('admin.pages.pegawai.tab-kepangkatan')
+
+                                                @include('admin.pages.pegawai.tab-kepegawaian')
+
+                                                @include('admin.pages.pegawai.tab-pendidikan')
+
+                                                @include('admin.pages.pegawai.tab-tugastamb')
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

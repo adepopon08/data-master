@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('npsn',12)->unique();
             $table->string('nama_sekolah',50);
-            $table->string('jenjang',4);
+            $table->string('jenjang',30);
             $table->timestamps();
         });
     }

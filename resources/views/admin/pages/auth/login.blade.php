@@ -17,7 +17,7 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css') }}">
-    <title>Sign In | MaTa K-One</title>
+    <title>Sign In | DATAMASTER</title>
 </head>
 
 <body class="bg-light">

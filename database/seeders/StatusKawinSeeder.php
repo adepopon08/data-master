@@ -17,16 +17,16 @@ class StatusKawinSeeder extends Seeder
     {
         StatusKawin::insert([
             [
-                'satatus_kawin' => 'Kawin',
+                'status_kawin' => 'Kawin',
             ],
             [
-                'satatus_kawin' => 'Belum Kawin',
+                'status_kawin' => 'Belum Kawin',
             ],
             [
-                'satatus_kawin' => 'Cerai Hidup',
+                'status_kawin' => 'Cerai Hidup',
             ],
             [
-                'satatus_kawin' => 'Cerai Mati',
+                'status_kawin' => 'Cerai Mati',
             ]
         ]);
     }

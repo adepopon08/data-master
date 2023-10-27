@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_statkawin', function (Blueprint $table) {
             $table->id();
-            $table->string('satatus_kawin',30);
+            $table->string('status_kawin',30);
             $table->timestamps();
         });
     }
