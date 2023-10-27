@@ -10,6 +10,7 @@ class JenisPtk extends Model
     use HasFactory;
 
     protected $table = 'tb_jnsptk';
+
     protected $fillable = [
         'jenis_ptk',
     ];
