@@ -121,7 +121,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="selectOne">Email</label>
-            <input type="email" name="email" id="email"
+            <input type="email" name="email2" id="email"
                 class="form-control @error('email') is-invalid @enderror" value="email">
             @error('email')
                 <div class="invalid-feedback">

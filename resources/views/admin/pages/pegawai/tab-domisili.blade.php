@@ -132,7 +132,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <button class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <a href="{{ route('admin.pegawai.index') }}" class="btn btn-secondary ml-4">Kembali</a>
         </div>
     </form>

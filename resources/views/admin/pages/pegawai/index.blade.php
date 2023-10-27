@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
     <div class="bg-primary pt-10 pb-21"></div>
-    <div class="container-fluid mt-n22 px-4">
+    <div class="container-fluid mt-n22">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
                 <!-- Page header -->
@@ -29,17 +29,13 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
+                                        <th scope="col">NIP</th>
                                         <th scope="col">Nama</th>
+                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Jenis PTK</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Ade Popon</td>
-                                        <td><a href="{{ route('admin.pegawai.edit', 1) }}">Edit</a></td>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -48,7 +44,7 @@
         </div>
     </div>
 @endsection
-{{--
+
 @push('scripts')
     <script>
         $(document).ready(function() {
@@ -56,7 +52,7 @@
                 responsive: true,
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.roles.lists') }}",
+                ajax: "{{ route('admin.pegawai.lists') }}",
                 language: {
                     processing: "Memuat...  ",
                 },
@@ -67,8 +63,20 @@
                         searchable: false
                     },
                     {
-                        data: 'role',
-                        name: 'role'
+                        data: 'nip',
+                        name: 'a.nip'
+                    },
+                    {
+                        data: 'nama',
+                        name: 'a.nama'
+                    },
+                    {
+                        data: 'jenis_kelamin',
+                        name: 'a.jenis_kelamin'
+                    },
+                    {
+                        data: 'jenis_ptk',
+                        name: 'b.jenis_ptk'
                     },
                     {
                         data: 'action',
@@ -80,4 +88,4 @@
             });
         });
     </script>
-@endpush --}}
+@endpush
