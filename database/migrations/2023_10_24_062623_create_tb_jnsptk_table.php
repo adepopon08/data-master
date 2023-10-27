@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tb_jnsptk', function (Blueprint $table) {
             $table->id();
-            $table->string('jenis_ptk',7);
+            $table->string('jenis_ptk',25);
             $table->timestamps();
         });
     }
