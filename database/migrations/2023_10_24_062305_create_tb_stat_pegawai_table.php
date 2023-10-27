@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('tb_stat_pegawai', function (Blueprint $table) {
             $table->id();
-            $table->string('stat_peg',8);
+            $table->string('stat_peg',30);
             $table->timestamps();
+
         });
     }
 
