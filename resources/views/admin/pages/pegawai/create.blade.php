@@ -31,26 +31,13 @@
                                     type="button" role="tab" aria-controls="domisili"
                                     aria-selected="false">Domisili</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pendidikan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pendidikan" type="button" role="tab" aria-controls="pendidikan"
-                                    aria-selected="false">Pendidikan</button>
-                            </li>
+
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="kepegawaian-tab" data-bs-toggle="tab"
                                     data-bs-target="#kepegawaian" type="button" role="tab" aria-controls="kepegawaian"
                                     aria-selected="false">Kepegawaian</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tugas-tab" data-bs-toggle="tab" data-bs-target="#tugas"
-                                    type="button" role="tab" aria-controls="tugas" aria-selected="false">Tugas
-                                    Tambahan</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="kepangkatan-tab" data-bs-toggle="tab"
-                                    data-bs-target="#kepangkatan" type="button" role="tab" aria-controls="kepangkatan"
-                                    aria-selected="false">Kepangkatan</button>
-                            </li>
+
                         </ul>
 
                         <!-- Tabs navs -->
@@ -433,8 +420,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="tab-pane fade" id="pendidikan" role="tabpanel"
-                                                aria-labelledby="pendidikan-tab">Pendidikan</div>
+
                                             <div class="tab-pane fade" id="kepegawaian" role="tabpanel"
                                                 aria-labelledby="kepegawaian-tab">Kepegawaian
                                                 <form action="{{ route('admin.pegawai.store') }}" method="POST">
@@ -594,10 +580,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="tab-pane fade" id="tugas" role="tabpanel"
-                                                aria-labelledby="tugas-tab">Tugas Tambahan</div>
-                                            <div class="tab-pane fade" id="kepangkatan" role="tabpanel"
-                                                aria-labelledby="kepangkatan-tab">Kepangkatan</div>
+
                                         </div>
                                     </div>
                                 </div>
