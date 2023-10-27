@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Bank;
 use App\Models\JenisPtk;
 use App\Models\Pangkat;
+use App\Models\Pegawai;
 use App\Models\StatusKawin;
 use App\Models\StatusPegawai;
 use App\Models\SumberGaji;
@@ -95,7 +96,11 @@ class PegawaiController extends Controller
             'nuks' => ['sometimes', 'nullable'],
         ]);
 
-        dd($validated);
+        $created = Pegawai::create($validated);
+        if ($created) {
+            return redirect()->route('admin.roles.index')->with('success', 'Data berhasil disimpan.');
+        }
+        return redirect()->route('admin.roles.index')->with('error', 'Data gagal disimpan.');
     }
 
     public function show($id)
