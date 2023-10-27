@@ -16,10 +16,12 @@
     <link href="{{ asset('template/assets/libs/@mdi/font/css/materialdesignicons.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('template/assets/libs/prismjs/themes/prism-okaidia.css') }}" rel="stylesheet">
     @include('components.css-datatable')
+    @include('components.css-select2')
+
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css') }}">
-    <title>Homepage | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
+    <title>Data Master</title>
 </head>
 
 <body class="bg-light">
@@ -57,6 +59,7 @@
     <!-- Theme JS -->
     <script src="{{ asset('template/assets/js/theme.min.js') }}"></script>
     @include('components.script-datatable')
+    @include('components.script-select2')
     @stack('scripts')
 
 
