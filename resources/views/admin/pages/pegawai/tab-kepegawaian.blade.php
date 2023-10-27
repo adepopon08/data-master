@@ -225,8 +225,8 @@
           <label class="form-label" for="selectOne">Diklat Pengawas</label>
           <select class="form-select @error('diklat_pengawas') is-invalid @enderror" name="diklat_pengawas"
               data-placeholder="Default select ">
-              <option value="IYA" @selected(($data->diklat_pengawas ?? '') == 'IYA')>IYA</option>
-              <option value="TIDAK" @selected(($data->diklat_pengawas ?? '') == 'TIDAK')>TIDAK</option>
+              <option value="1" @selected(($data->diklat_pengawas ?? '') == 'IYA')>IYA</option>
+              <option value="0" @selected(($data->diklat_pengawas ?? '') == 'TIDAK')>TIDAK</option>
           </select>
           @error('diklat_pengawas')
               <div class="invalid-feedback">
@@ -238,8 +238,8 @@
           <label class="form-label" for="selectOne">Keahlian Braille</label>
           <select class="form-select @error('keahlian_braille') is-invalid @enderror" name="keahlian_braille"
               data-placeholder="Default select ">
-              <option value="IYA" @selected(($data->keahlian_braille ?? '') == 'IYA')>IYA</option>
-              <option value="TIDAK" @selected(($data->keahlian_braille ?? '') == 'TIDAK')>TIDAK</option>
+              <option value="1" @selected(($data->keahlian_braille ?? '') == 'IYA')>IYA</option>
+              <option value="0" @selected(($data->keahlian_braille ?? '') == 'TIDAK')>TIDAK</option>
           </select>
           @error('keahlian_braille')
               <div class="invalid-feedback">
@@ -251,8 +251,8 @@
           <label class="form-label" for="selectOne">Keahlian Bahasa Isyarat</label>
           <select class="form-select @error('keahlian_bahasa_isyarat') is-invalid @enderror"
               name="keahlian_bahasa_isyarat" data-placeholder="Default select ">
-              <option value="IYA" @selected(($data->keahlian_bahasa_isyarat ?? '') == 'IYA')>IYA</option>
-              <option value="TIDAK" @selected(($data->keahlian_bahasa_isyarat ?? '') == 'TIDAK')>TIDAK</option>
+              <option value="1" @selected(($data->keahlian_bahasa_isyarat ?? '') == 'IYA')>IYA</option>
+              <option value="0" @selected(($data->keahlian_bahasa_isyarat ?? '') == 'TIDAK')>TIDAK</option>
           </select>
           @error('keahlian_bahasa_isyarat')
               <div class="invalid-feedback">
