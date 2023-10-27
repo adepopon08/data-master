@@ -10,6 +10,6 @@ class StatusKawin extends Model
     use HasFactory;
     protected $table = 'tb_statkawin';
     protected $fillable = [
-        'satatus_kawin',
+        'status_kawin',
     ];
 }
