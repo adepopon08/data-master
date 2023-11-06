@@ -76,3 +76,150 @@
         </div>
     </div>
 @endsection
+
+
+
+@push('scripts')
+    <script>
+        $(".provinsi").select2({
+            theme: "bootstrap-5",
+            width: "100%",
+            placeholder: "Pilih Provinsi",
+            ajax: {
+                url: '/api/provinsi',
+                dataType: 'json',
+                delay: 500,
+                processResults: function(data) {
+                    let result = $.map(data, function(obj) {
+                        return {
+                            text: obj.provinsi,
+                            id: obj.id
+                        }
+                    });
+                    return {
+                        results: result
+                    };
+                },
+                cached: true
+            }
+        }).on('select2:select', function(e) {
+            const selectedValue = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: '/api/kabupaten/' + selectedValue, // Replace this with your server-side endpoint URL
+                success: function(data) {
+                    const formattedData = data.map(function(item) {
+                        return {
+                            id: item.id,
+                            text: item.kabupaten
+                        };
+                    });
+
+                    formattedData.unshift({
+                        id: '',
+                        text: "--- Silakan Pilih ---"
+                    });
+
+                    $('.kabupaten').empty();
+                    $('.kecamatan').empty();
+                    $('.kelurahan').empty();
+                    $('#kode_pos').val("");
+
+
+                    $('.kabupaten').select2({
+                        theme: "bootstrap-5",
+                        placeholder: "Pilih Kota / Kabupaten",
+                        width: "100%",
+                        data: formattedData
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching data:', error);
+                }
+            });
+        });
+
+
+        $(".kabupaten").on('change', function() {
+            const selectedValue = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: '/api/kecamatan/' + selectedValue, // Replace this with your server-side endpoint URL
+                success: function(data) {
+                    const formattedData = data.map(function(item) {
+                        return {
+                            id: item.id,
+                            text: item.kecamatan
+                        };
+                    });
+
+                    formattedData.unshift({
+                        id: '',
+                        text: "--- Silakan Pilih ---"
+                    });
+
+                    $('.kecamatan').empty();
+                    $('.kelurahan').empty();
+                    $('#kode_pos').val("");
+
+
+                    $('.kecamatan').select2({
+                        theme: "bootstrap-5",
+                        placeholder: "Pilih Kecamatan",
+                        width: "100%",
+                        data: formattedData
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching data:', error);
+                }
+            });
+        });
+
+        $(".kecamatan").on('change', function() {
+            const selectedValue = $(this).val();
+            $.ajax({
+                type: 'GET',
+                url: '/api/kelurahan/' + selectedValue, // Replace this with your server-side endpoint URL
+                success: function(data) {
+                    const formattedData = data.map(function(item) {
+                        return {
+                            id: item.id,
+                            text: item.kelurahan,
+                            kode_pos: item.kode_pos,
+                        };
+                    });
+
+                    formattedData.unshift({
+                        id: '',
+                        text: "--- Silakan Pilih ---"
+                    });
+
+                    $('.kelurahan').empty();
+                    $('#kode_pos').val("");
+
+                    $('.kelurahan').select2({
+                        theme: "bootstrap-5",
+                        placeholder: "Pilih Kelurahan",
+                        width: "100%",
+                        data: formattedData,
+                        templateSelection: function(data, container) {
+                            $(data.element).attr('data-kode_pos', data.kode_pos);
+                            return data.text;
+                        }
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching data:', error);
+                }
+            });
+        });
+
+        $(".kelurahan").on('select2:select', function(e) {
+            let data = e.params.data;
+            // let kode_pos = $('.kelurahan').find(':Selected').attr('data-kode_pos');
+            // console.log(data);
+            $('#kode_pos').val(data.kode_pos);
+        });
+    </script>
+@endpush
