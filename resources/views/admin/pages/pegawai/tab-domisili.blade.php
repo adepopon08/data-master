@@ -41,14 +41,10 @@
     </div>
     <div class="mb-3">
         <label class="form-label" for="selectOne">Provinsi</label>
-        <select class="select2 form-select @error('id_provinsi') is-invalid @enderror" name="id_provinsi"
+        <select class="provinsi form-select @error('id_provinsi') is-invalid @enderror" name="id_provinsi"
             data-placeholder="Pilih Provinsi">
             <option></option>
-            @foreach ($provinsi as $prov)
-                <option value="{{ $prov->id }}" @selected(($data->id_provinsi ?? '') == $prov->id)>
-                    {{ $prov->provinsi }}
-                </option>
-            @endforeach
+
         </select>
         @error('id_provinsi')
             <div class="invalid-feedback">
@@ -58,13 +54,9 @@
     </div>
     <div class="mb-3">
         <label class="form-label" for="selectOne">Kabupaten / Kota</label>
-        <select class="select2 form-select @error('id_kabupaten') is-invalid @enderror" name="id_kabupaten"
+        <select class="kabupaten form-select @error('id_kabupaten') is-invalid @enderror" name="id_kabupaten"
             data-placeholder="Pilih Kabupaten">
-            @foreach ($kabupaten as $kab)
-                <option value="{{ $kab->id }}" @selected(($data->id_kabupaten ?? '') == $kab->id)>
-                    {{ $kab->kabupaten }}
-                </option>
-            @endforeach
+            <option></option>
         </select>
         @error('id_kabupaten')
             <div class="invalid-feedback">
@@ -75,13 +67,9 @@
 
     <div class="mb-3">
         <label class="form-label" for="selectOne">Kecamatan</label>
-        <select class="select2 form-select @error('id_kecamatan') is-invalid @enderror" name="id_kecamatan"
+        <select class="kecamatan form-select @error('id_kecamatan') is-invalid @enderror" name="id_kecamatan"
             data-placeholder="Pilih Kecamatan">
-            @foreach ($kecamatan as $camat)
-                <option value="{{ $camat->id }}" @selected(($data->id_kecamatan ?? '') == $camat->id)>
-                    {{ $camat->kecamatan }}
-                </option>
-            @endforeach
+            <option></option>
         </select>
         @error('id_kecamatan')
             <div class="invalid-feedback">
@@ -92,13 +80,9 @@
 
     <div class="mb-3">
         <label class="form-label" for="selectOne">Kelurahan</label>
-        <select class="select2 form-select @error('id_kelurahan') is-invalid @enderror" name="id_kelurahan"
+        <select class="kelurahan form-select @error('id_kelurahan') is-invalid @enderror" name="id_kelurahan"
             data-placeholder="Pilih Kelurahan">
-            @foreach ($kelurahan as $kel)
-                <option value="{{ $kel->id }}" @selected(($data->id_kelurahan ?? '') == $kel->id)>
-                    {{ $kel->kelurahan }}
-                </option>
-            @endforeach
+            <option></option>
         </select>
         @error('id_kelurahan')
             <div class="invalid-feedback">

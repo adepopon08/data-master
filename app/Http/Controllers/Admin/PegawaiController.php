@@ -49,7 +49,7 @@ class PegawaiController extends Controller
         $validated = $request->validate([
             'nama' => ['sometimes', 'required'],
             'NIK' => ['sometimes', 'required'],
-            'NIP' => ['sometimes', 'nullable'],
+            'NIP' => ['sometimes', 'nullable', 'unique:tb_ptk,nip'],
             'NUPTK' => ['sometimes', 'nullable'],
             'email' => ['sometimes', 'required'],
             'jenis_kelamin' => ['sometimes', 'required'],
